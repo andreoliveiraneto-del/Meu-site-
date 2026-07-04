@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Site de Futebol</title>
+    <link rel="stylesheet" href="style.css">
+    <body>
+
+  <h1>Meu Site de Futebol</h1>
+  
+  <!-- SLOGAN DO SITE (Agora limpo usando Classe!) -->
+  <p class="slogan-site">⚽ Tudo sobre futebol é aqui !!</p>
+  
+      <!-- BARRA DE PESQUISA -->
+    <div class="container-busca">
+        <input type="text" id="campo-pesquisa" class="input-busca" placeholder="Buscar times, jogos, notícias...">
+        <button class="botao-busca" onclick="executarPesquisa()">Buscar</button>
+    </div>
+
+
+
+<p><a href="#">Início</a> | <a href="#">Notícias</a> | <a href="#">Contato</a></p>
+<h2>Últimas Notícias 📰</h2>
+<!-- SEÇÃO DE ALERTA: TABU HISTÓRICO -->
+<div style="background-color: #3a1a1a; border: 2px solid #ff4444; padding: 15px; border-radius: 8px; margin-top: 25px;">
+  <h3 style="color: #ff4444; margin-top: 0; display: flex; align-items: center; gap: 8px;">
+    ⚠️ Tabu Incomum: O "Carrasco" da Seleção
+  </h3>
+  <p style="margin: 5px 0 12px 0; line-height: 1.5; color: #ffcccc;">
+    Você sabia? A Noruega é a única seleção do mundo que enfrentou o Brasil múltiplas vezes e <strong>nunca perdeu</strong> para os brasileiros.
+  </p>
+  
+  <ul style="margin: 0; padding-left: 20px; color: #fff; font-size: 14px; line-height: 1.6;">
+    <li><strong>1988:</strong> Noruega 1 x 1 Brasil (Amistoso)</li>
+    <li><strong>1997:</strong> Noruega 4 x 2 Brasil (Amistoso)</li>
+    <li><strong>1998:</strong> Brasil 1 x 2 Noruega (Copa do Mundo - França)</li>
+    <li><strong>2006:</strong> Noruega 1 x 1 Brasil (Amistoso)</li>
+  </ul>
+  
+  <p style="margin: 15px 0 0 0; font-weight: bold; color: #00ff88; text-align: center;">
+    Será que o Brasil finalmente quebra essa maldição no domingo? 🇧🇷
+  </p>
+</div>
+<!-- ENQUETE INTERATIVA -->
+<div style="background: #243447; padding: 15px; border-radius: 8px; margin-top: 20px; text-align: center; border: 1px solid #1a2432;">
+    <h3 style="color: #00ff88; margin-top: 0;">Quem vence o próximo jogo?</h3>
+<button type="button" id="btn-brasil" style="background: #ffcc00; color: #000; border: none; padding: 8px 15px; margin: 5px; font-weight: bold; border-radius: 4px; cursor: pointer;">Brasil</button>
+<button type="button" id="btn-noruega" style="background: #ffffff; color: #000; border: none; padding: 8px 15px; margin: 5px; font-weight: bold; border-radius: 4px; cursor: pointer;">Noruega</button>
+
+
+
+
+
+
+   
+    
+    <div id="resultado-enquete" style="display:none; margin-top: 15px; color: #fff;">
+        <p>Brasil: <span id="porcentagem-brasil" style="color: #ffcc00; font-weight: bold;">0</span>%</p>
+        <p>Noruega: <span id="porcentagem-noruega" style="color: #aaa; font-weight: bold;">0</span>%</p>
+    </div>
+</div>
+
+
+<h2 style="margin-top: 30px;">Mata-Mata da Copa do Mundo</h2>
+<h2 style="margin-top: 30px;">Mata-Mata da Copa do Mundo 2026</h2>
+
+<div style="display: flex; gap: 20px; overflow-x: auto; background-color: #1a2432; padding: 20px; border-radius: 8px;">
+  
+  <!-- OITAVAS DE FINAL -->
+  <div style="flex: 1; min-width: 180px;">
+    <h4 style="color: #00ff88; margin-top: 0;">Oitavas de Final</h4>
+    
+    <!-- Jogo do Brasil destacado -->
+    <div style="background: #243447; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 2px solid #00ff88;">
+      <span style="font-weight: bold; color: #ffcc00;">🇧🇷 Brasil</span> <br>
+      <span style="font-weight: bold; color: #ffffff;">🇳🇴 Noruega</span>
+      <div style="font-size: 11px; color: #aaa; margin-top: 5px;">Dom - 05/07 às 17h</div>
+    </div>
+
+    <div style="background: #243447; padding: 10px; margin-bottom: 15px; border-radius: 6px; opacity: 0.7;">
+      🇲🇽 México <br> 
+      🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra
+    </div>
+  </div>
+
+  <!-- QUARTAS DE FINAL -->
+  <div style="flex: 1; min-width: 180px; display: flex; flex-direction: column; justify-content: center;">
+    <h4 style="color: #00ff88; margin-top: 0;">Quartas de Final</h4>
+    <div style="background: #243447; padding: 12px; border-radius: 6px; border-left: 4px solid #ffcc00;">
+      Vencedor (Brasil x Noruega) <br>
+      <hr style="border: 0; border-top: 1px solid #3a4f66; margin: 8px 0;">
+      Vencedor (México x Inglaterra)
+    </div>
+  </div>
+
+  <!-- SEMIFINAL / FINAL -->
+  <div style="flex: 1; min-width: 160px; display: flex; flex-direction: column; justify-content: center;">
+    <h4 style="color: #ffcc00; margin-top: 0;">🏆 Caminho da Final</h4>
+    <div style="background: #3a4f66; padding: 12px; border-radius: 6px; border: 1px dashed #ffcc00; text-align: center; font-size: 14px;">
+      Rumo ao Maracanã!
+    </div>
+  </div>
+
+</div>
+<script src="script.js"></script>
+<h4 style="color: #ffcc00; margin-top: 0;">📋 Novidades da Seleção</h4>
+<p style="color: #fff; font-size: 15px; line-height: 1.6;">
+    O ponta <strong>raphinha voltou aos treinos</strong> com bola junto ao restante do elenco após se recuperar da lesão! Ele participou normalmente das atividades táticas.
+</p>
+<p style="color: #00ff88; font-weight: bold; margin-bottom: 0; text-align: center;">
+    🤔 Será que ele vem para o próximo jogo?
+</p>
+<!-- Seção de Engajamento -->
+<section class="engajamento-container">
+    
+
+
+<!-- Seção de Engajamento -->
+<section class="engajamento-container">
+    
+ 
+
+
+    <!-- ENQUETE DE ESCALAÇÃO -->
+    <div class="card-interativo">
+        <h3>⚽ Quem deve ser o centroavante titular do Brasil?</h3>
+        <div class="opcoes-enquete">
+            <button class="btn-enquete" onclick="votar('Matheus Cunha')">Matheus Cunha</button>
+            <button class="btn-enquete" onclick="votar('Endrick')">Endrick</button>
+        </div>
+        <p id="mensagem-voto" style="display:none; color: #2ecc71; margin-top: 10px; font-weight: bold;"></p>
+    </div>
+
+</section>
+
+<!-- SEÇÃO DE NOTÍCIA: CABO VERDE ELIMINADO -->
+<article class="noticia-container">
+    <div class="noticia-header">
+        <span class="tag-urgente">💔 Adeus com Orgulho</span>
+        <h2>O Fim do Sonho Mais Bonito da Copa: Cabo Verde cai de pé contra a Argentina</h2>
+        <span class="noticia-data">Publicado em 04 de Julho de 2026</span>
+    </div>
+    
+    <div class="noticia-corpo">
+        <p>O futebol pode ser a coisa mais linda do mundo, mas também sabe ser incrivelmente cruel. Ontem à noite, o planeta inteiro se vestiu de azul e torceu pelos <strong>Tubarões Azuis</strong>. A seleção de Cabo Verde, um pequeno arquipélago de pouco mais de 500 mil habitantes que disputava sua primeira Copa do Mundo, se despediu do torneio após uma batalha épica de 120 minutos contra a gigante Argentina.</p>
+        
+        <p>Eles não tinham os contratos milionários ou os holofotes dos rivais, mas tinham a alma inteira de um povo dentro de campo. Diante dos atuais campeões do mundo, Cabo Verde jogou de igual para igual. Viu Messi abrir o placar, buscou o empate com Deroy Duarte. Sofreu o segundo gol na prorrogação e, quando todos achavam que estavam entregues, Sidny Cabral fez uma funalização linda e dibu martinez n tinha chances de pegar,para empatar novamente e correr para os braços da torcida.</p>
+        
+        <blockquote class="frase-emocionante">
+            "Eu trabalhei a minha vida inteira por esse momento... por esse sonho. Choramos no vestiário porque queríamos dar essa alegria eterna ao nosso povo." <br>
+            <span>– Vozinha, goleiro e herói de Cabo Verde, visivelmente emocionado após o apito final.</span>
+        </blockquote>
+
+        <p>O fim veio da forma mais dolorosa possível: um gol contra acidental no segundo tempo da prorrogação selou o placar de 3 a 2. Quando o árbitro encerrou o jogo, as lágrimas dos jogadores cabo-verdianos no gramado de Miami lavaram a alma de cada fã do futebol puro. Cabo Verde foi eliminada do papel, mas está eternizada na história como a maior e mais bonita surpresa que a Copa de 2026 já viu. Obrigado por nos fazer sonhar, Tubarões Azuis. O mundo chora com vocês hoje.</p>
+    </div>
+</article>
+
+
+
+<!-- JOGOS DE HOJE - OITAVAS DE FINAL -->
+<section class="jogos-hoje-container">
+    <h3>📅 Jogos de Hoje pelas Oitavas de Final (04/07)</h3>
+    <div class="grid-jogos">
+        
+        <!-- JOGO 1 -->
+        <div class="card-jogo-hoje">
+            <div class="status-tempo">⏰ 14:00 (Horário de Brasília)</div>
+            <div class="confronto-hoje">
+                <span class="time-hoje">🇨🇦 Canadá</span>
+                <span class="vs-hoje">VS</span>
+                <span class="time-hoje">Marrocos 🇲🇦</span>
+            </div>
+            <div class="local-jogo">🏟️ Houston, EUA</div>
+        </div>
+
+        <!-- JOGO 2 -->
+        <div class="card-jogo-hoje">
+            <div class="status-tempo">⏰ 18:00 (Horário de Brasília)</div>
+            <div class="confronto-hoje">
+                <span class="time-hoje">🇵🇾 Paraguai</span>
+                <span class="vs-hoje">VS</span>
+                <span class="time-hoje">França 🇫🇷</span>
+            </div>
+            <div class="local-jogo">🏟️ Filadélfia, EUA</div>
+        </div>
+
+    </div>
+</section>
+<!--<!-- Seção do Bolão de Previsões -->
+<section id="secao-bolao" class="container-bolao">
+    <h2>🏆 Bolão da Copa - Deixe seu Palpite</h2>
+    
+    <!-- JOGO 1: CANADÁ VS MARROCOS -->
+    <div class="card-jogo-bolao" style="margin-bottom: 12px;">
+        <div class="info-jogo">Oitavas de Final - 14:00</div>
+        <div class="confronto-palpite">
+            <div class="time-palpite">
+                <span>🇨🇦 Canadá</span>
+                <input type="number" id="palpite-canada" min="0" placeholder="0">
+            </div>
+            <span class="vs-bolao">VS</span>
+            <div class="time-palpite">
+                <input type="number" id="palpite-marrocos" min="0" placeholder="0">
+                <span>🇲🇦 Marrocos</span>
+            </div>
+        </div>
+<button id="btn-jogo1" class="btn-salvar-palpite" onclick="salvarPalpite('can_mar', 'palpite-canada', 'palpite-marrocos', 'msg-can-mar')">Salvar Palpite</button>
+
+        <p id="msg-can-mar" style="display:none; color: #00ff7f; font-size: 12px; margin-top: 5px;"></p>
+    </div>
+
+    <div class="card-jogo-bolao">
+        <div class="info-jogo">Oitavas de Final - 18:00</div>
+        <div class="confronto-palpite">
+            <div class="time-palpite">
+                <span>🇵🇾 Paraguai</span>
+                <input type="number" id="palpite-paraguai" min="0" placeholder="0">
+            </div>
+            
+            <span class="vs-bolao">VS</span>
+            
+            <div class="time-palpite">
+                <input type="number" id="palpite-franca" min="0" placeholder="0">
+                <span>🇫🇷 França</span>            </div>
+        </div>
+        
+        <button id="btn-jogo2" class="btn-salvar-palpite" onclick="salvarPalpite('par_fra', 'palpite-paraguai', 'palpite-franca', 'msg-par-fra')">Salvar Palpite</button>
+        <p id="msg-par-fra" style="display:none; color: #00ff7f; font-size: 12px; margin-top: 5px;"></p>
+    </div>
+
+
+            </div>
+        </div>
+        
+        <button id="btn-jogo2" class="btn-salvar-palpite" onclick="salvarPalpite('par_fra', 'palpite-paraguai', 'palpite-franca', 'msg-par-fra')">Salvar Palpite</button>
+        <p id="msg-par-fra" style="display:none; color: #00ff7f; font-size: 12px; margin-top: 5px;"></p>
+    </div>
+
